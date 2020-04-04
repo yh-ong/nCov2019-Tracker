@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>search</ion-title>
+    <ion-title>Country List</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar animated (ionChange)="onSearch($event)"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <div>
+      <ion-item *ngFor="let countryItem of countryItems" routerLink="/detail/{{countryItem}}">{{countryItem}}</ion-item>
+    </div>
+  </ion-list>
 </ion-content>
