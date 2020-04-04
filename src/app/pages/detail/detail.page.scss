@@ -1,0 +1,9 @@
+ion-toolbar {
+    // --background-color: #F7A278;
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+ion-content {
+    --background: url('../../../assets/detail-background.svg') no-repeat;
+}
