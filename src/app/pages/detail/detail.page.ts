@@ -10,9 +10,9 @@ import { Chart } from 'chart.js';
 })
 export class DetailPage implements OnInit {
 
-  @ViewChild("lineCanvas", {static: true}) lineCanvas: ElementRef;
-  @ViewChild("deathslineCanvas", {static: true}) dlineCanvas: ElementRef;
-  @ViewChild("recoveredlineCanvas", {static: true}) recoverlineCanvas: ElementRef;
+  @ViewChild("displayConfirmedChart", {static: true}) confirmedCanvas: ElementRef;
+  @ViewChild("displayDeathsChart", {static: true}) deathsCanvas: ElementRef;
+  @ViewChild("displayRecoveredChart", {static: true}) recoveredCanvas: ElementRef;
 
   countryId = null;
   location: any;
@@ -21,9 +21,9 @@ export class DetailPage implements OnInit {
   totalRecovered: any;
   arrayData: any;
 
-  private lineChart: Chart;
-  private deathslineChart: Chart;
-  private recoveredlineChart: Chart;
+  private displayConfirmedChart: Chart;
+  private displayDeathsChart: Chart;
+  private displayRecoveredChart: Chart;
 
   constructor(private activatedRoutes: ActivatedRoute, private providerSvc: ProviderService) { }
 
@@ -36,9 +36,8 @@ export class DetailPage implements OnInit {
 
     this.providerSvc.getData(this.providerSvc.API_URL).subscribe(res => {
       this.location = res[this.countryId];
-      
+
       var result = this.groupByMonth();
-      console.log(result);
       this.displayGraph(result);
 
       let lastNumberObject = Object.keys(this.location).length - 1;
@@ -56,8 +55,6 @@ export class DetailPage implements OnInit {
       var date = new Date(obj.date);
       var month = date.getMonth();
 
-      var eachMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
       if (months[month]) {
         months[month].push(obj);
       } else {
@@ -68,7 +65,6 @@ export class DetailPage implements OnInit {
   }
 
   displayGraph(byMonthData) {
-    
     var confirmedDetails = [];
     var deathsDetails = [];
     var recoveredDetails = [];
@@ -82,13 +78,13 @@ export class DetailPage implements OnInit {
       recoveredDetails[i] = byMonth[lastJanuaryObject].recovered;
     }
 
-    this.lineChart = new Chart(this.lineCanvas.nativeElement, {
+    this.displayConfirmedChart = new Chart(this.confirmedCanvas.nativeElement, {
       type: "line",
       data: {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [
           {
-            label: "My First dataset",
+            label: "Confirmed",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",
@@ -113,13 +109,13 @@ export class DetailPage implements OnInit {
       }
     });
     
-    this.deathslineChart = new Chart(this.dlineCanvas.nativeElement, {
+    this.displayDeathsChart = new Chart(this.deathsCanvas.nativeElement, {
       type: "line",
       data: {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [
           {
-            label: "My First dataset",
+            label: "Deaths",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",
@@ -144,13 +140,13 @@ export class DetailPage implements OnInit {
       }
     });
 
-    this.recoveredlineChart = new Chart(this.recoverlineCanvas.nativeElement, {
+    this.displayRecoveredChart = new Chart(this.recoveredCanvas.nativeElement, {
       type: "line",
       data: {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [
           {
-            label: "My First dataset",
+            label: "Recovered",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",
