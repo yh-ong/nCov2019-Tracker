@@ -1,20 +1,61 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="ion-margin brand-name">
+    <h3>nCov2019 <span class="text-red">Tracker</span></h3>
+    <h2>{{timeStatus}}</h2>
   </div>
+  
+  <ion-grid>
+    <ion-row class="count-board">
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Days since MCO</ion-card-subtitle>
+            <div class="text-center">
+              <h1>{{dayStart}}</h1>
+              <p>DAYS</p>
+            </div>
+            <ion-card-subtitle>MCO started on <strong>{{displayStartDate}}</strong></ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Days till MCO lifted</ion-card-subtitle>
+            <div class="text-center">
+              <h1>{{dayEnd}}</h1>
+              <p>DAYS</p>
+            </div>
+            <ion-card-subtitle>MCO to lift on <strong>{{displayEndDate}}</strong></ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-text class="ion-margin-horizontal location-title">
+    Malaysia
+  </ion-text>
+  <ion-card class="count-container">
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card-subtitle>Confimed</ion-card-subtitle>
+            <h1>{{totalConfirmed}}</h1>
+          </ion-col>
+          <ion-col>
+            <ion-card-subtitle>Deaths</ion-card-subtitle>
+            <h1>{{totalDeaths}}</h1>
+          </ion-col>
+          <ion-col>
+            <ion-card-subtitle>Recovered</ion-card-subtitle>
+            <h1>{{totalRecovered}}</h1>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+  </ion-card>
+
 </ion-content>

@@ -1,3 +1,51 @@
+ion-header {
+  text-align: center;
+  --background: transparent;
+}
+
+ion-content {
+  --background: url('../../assets/wave.svg') no-repeat;
+  --background-size: cover;
+}
+
+.brand-name {
+  padding-top: 20px;
+
+  .text-red {
+    font-weight: bold;
+    color: #AA4B1B;
+    // color: #FB7F76;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.count-board {
+  h1 {
+    font-size: 35px;
+  }
+  p {
+    margin-top: -8px;
+  }
+  strong {
+    color: #ddd;
+  }
+}
+
+.location-title {
+  font-size: 20px;
+}
+
+h1 {
+  color: #ffffff;
+}
+
 #container {
   text-align: center;
 
