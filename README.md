@@ -19,14 +19,14 @@ This application currently working on android environment (API 26).
 ### Android
 
 1. 'npm install'
-2. 'cordova platform add android'
+2. 'ionic cordova platform add android'
 3. 'ionic cordova build android'
 4. Connect your Android device and run the application with ionic cordova run android (make sure USB debugging is enabled on your device)
 
 ### IOS
 
 1. 'npm install'
-2. 'cordova platform add ios'
+2. 'ionic cordova platform add ios'
 3. 'ionic cordova build ios'
 4. Connect your iOS device and run the application, either by
 5. Opening up the relevant .xcodeproj on Xcode and clicking the run button (making sure your device is selected)
