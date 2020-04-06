@@ -25,7 +25,16 @@ const routes: Routes = [
             loadChildren: () => import('../pages/search/search.module').then( m => m.SearchPageModule)
           }
         ]
-      }
+      },
+      {
+        path: 'setting',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../pages/setting/setting.module').then( m => m.SettingPageModule)
+          }
+        ]
+      },
     ]
   },
   {

@@ -13,6 +13,10 @@ const routes: Routes = [
     path: 'detail/:id',
     loadChildren: () => import('./pages/detail/detail.module').then( m => m.DetailPageModule)
   },
+  {
+    path: 'setting-period',
+    loadChildren: () => import('./pages/setting-period/setting-period.module').then( m => m.SettingPeriodPageModule)
+  },
 ];
 
 @NgModule({
