@@ -1,5 +1,7 @@
 {
   "name": "ncov2019 tracker",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
