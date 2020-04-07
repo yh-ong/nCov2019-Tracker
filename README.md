@@ -10,9 +10,9 @@ To provide user a clean-based looking to see the daily updates cases data in Mal
 
 ## Screenshot
 
-![Image of Home Page](https://yh-ong.github.com/screenshot/homepage.png)
-![Image of Country List](https://yh-ong.github.com/screenshot/country-list.png)
-![Image of Country Details](https://yh-ong.github.com/screenshot/details.png)
+![Image of Home Page](screenshot/homepage.png)
+![Image of Country List](screenshot/country-list.png)
+![Image of Country Details](screenshot/details.png)
 
 ## Requirements
 
