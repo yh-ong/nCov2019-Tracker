@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/setting"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Change Dates</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list-header>
+    <ion-label>Select Date</ion-label>
+  </ion-list-header>
+  
+  <ion-item>
+    <ion-label>Start Date</ion-label>
+    <ion-datetime display-format="D MMMM YYYY" picker-format="YYYY-MM-DD" [(ngModel)]="formData.dateFrom"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>End Date</ion-label>
+    <ion-datetime display-format="D MMMM YYYY" picker-format="YYYY-MM-DD" [(ngModel)]="formData.dateUntil"></ion-datetime>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-button color="primary" expand="block" class="ion-margin-top" (click)="saveData()">Save Change</ion-button>
+</ion-footer>
