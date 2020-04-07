@@ -11,7 +11,6 @@ To provide user a clean-based looking to see the daily updates cases data in Mal
 ## Screenshot
 
 ![Image of Home Page](screenshot/homepage.png)
-![Image of Country List](screenshot/country-list.png)
 ![Image of Country Details](screenshot/details.png)
 
 ## Requirements
