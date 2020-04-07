@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProviderService } from '../services/provider.service';
 import { DatePipe } from '@angular/common';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-home',
@@ -24,8 +25,17 @@ export class HomePage {
   totalRecovered: any;
   locationMalaysia: any;
 
-  constructor(private providerSvc: ProviderService, private datePipe: DatePipe) {
-    this.countPeriod();
+  constructor(private providerSvc: ProviderService, private datePipe: DatePipe, private storage: Storage) {
+    this.storage.get('MCO_PERIOD').then(val => {
+      if (val != null) {
+        this.startDate = new Date(val[0].from);
+        this.endDate = new Date(val[0].until);
+        this.countPeriod();
+      } else {
+        this.countPeriod();
+      }
+    });    
+
     this.getData();
     this.showTimeStatus();
   }
