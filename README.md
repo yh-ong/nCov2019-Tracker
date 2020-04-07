@@ -8,6 +8,12 @@ To provide user a clean-based looking to see the daily updates cases data in Mal
 * Countdown status for Malaysia Movement Control period
 * View status in line chart by [Chart.js](https://www.chartjs.org/)
 
+## Screenshot
+
+![Image of Home Page](https://yh-ong.github.com/screenshot/homepage.png)
+![Image of Country List](https://yh-ong.github.com/screenshot/country-list.png)
+![Image of Country Details](https://yh-ong.github.com/screenshot/details.png)
+
 ## Requirements
 
 * [Android 8.0 (API 26)](https://developer.android.com/about/versions/oreo/android-8.0) and above
