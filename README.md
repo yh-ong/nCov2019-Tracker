@@ -10,8 +10,11 @@ To provide user a clean-based looking to see the daily updates cases data in Mal
 
 ## Screenshot
 
-![Image of Home Page](screenshot/homepage.png)
-![Image of Country Details](screenshot/details.png)
+<p align="center">
+  <img src="screenshot/homepage.png" width="200" title="Image of Home Page">
+  <img src="screenshot/country-list.png" width="200" alt="Image of Country List">
+  <img src="screenshot/details.png" width="200" alt="Image of Country Details">
+</p>
 
 ## Requirements
 
