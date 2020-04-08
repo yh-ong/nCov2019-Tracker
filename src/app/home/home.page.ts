@@ -13,8 +13,8 @@ export class HomePage {
   timeStatus: string;
 
   curDate = new Date();
-  startDate = new Date('2020-3-18');
-  endDate = new Date('2020-4-14');
+  startDate: Date;
+  endDate: Date;
   dayStart: number;
   dayEnd: number;
   displayStartDate: string;
@@ -26,15 +26,19 @@ export class HomePage {
   locationMalaysia: any;
 
   constructor(private providerSvc: ProviderService, private datePipe: DatePipe, private storage: Storage) {
-    this.storage.get('MCO_PERIOD').then(val => {
-      if (val != null) {
-        this.startDate = new Date(val[0].from);
-        this.endDate = new Date(val[0].until);
-        this.countPeriod();
-      } else {
-        this.countPeriod();
-      }
-    });    
+    setInterval(() => {
+      this.storage.get('MCO_PERIOD').then(val => {
+        if (val != null) {
+          this.startDate = new Date(val[0].from);
+          this.endDate = new Date(val[0].until);
+          this.countPeriod();
+        } else {
+          this.startDate = new Date('2020-3-18');
+          this.endDate = new Date('2020-4-14');
+          this.countPeriod();
+        }
+      });
+    },1000)
 
     this.getData();
     this.showTimeStatus();

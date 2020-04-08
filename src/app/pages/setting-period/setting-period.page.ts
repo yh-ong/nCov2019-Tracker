@@ -23,7 +23,8 @@ export class SettingPeriodPage implements OnInit {
         this.formData.dateFrom = val[0].from;
         this.formData.dateUntil = val[0].until;
       } else {
-        console.log("No Data Found");
+        this.formData.dateFrom = "2020-3-18";
+        this.formData.dateUntil = "2020-4-14";
       }
     });
 
@@ -35,8 +36,8 @@ export class SettingPeriodPage implements OnInit {
 
       arr.push(
         {
-          'from': this.datePipe.transform(this.formData.dateFrom, "y-M-d"),  //'2020-3-18'
-          'until': this.datePipe.transform(this.formData.dateUntil, "y-M-d") //'2020-4-14'
+          'from': this.datePipe.transform(this.formData.dateFrom, "y-M-d"),
+          'until': this.datePipe.transform(this.formData.dateUntil, "y-M-d")
         }
       );
 
