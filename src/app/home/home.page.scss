@@ -29,6 +29,7 @@ ion-content {
 .count-board {
   h1 {
     font-size: 35px;
+    color: var(--ion-text-color);
   }
   p {
     margin-top: -8px;
@@ -40,10 +41,6 @@ ion-content {
 
 .location-title {
   font-size: 20px;
-}
-
-h1 {
-  color: #ffffff;
 }
 
 #container {
