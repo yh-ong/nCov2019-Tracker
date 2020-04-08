@@ -1,12 +1,12 @@
 # nCov2019 Tracker
 
-To provide user a clean-based looking to see the daily updates cases data in Malaysia.
+To provide user a clean-based looking to see the daily updates cases data.
 
 ## Features
 
-* View each countries cases with daily update data
-* Countdown status for Malaysia Movement Control period
-* View status in line chart by [Chart.js](https://www.chartjs.org/)
+* View each countries cases with daily update data.
+* View and Edit dates of countdown status for movement control period.
+* View chart analysis in line chart by [Chart.js](https://www.chartjs.org/)
 
 ## Screenshot
 
@@ -16,13 +16,7 @@ To provide user a clean-based looking to see the daily updates cases data in Mal
   <img src="screenshot/details.png" width="200" alt="Image of Country Details">
 </p>
 
-## Requirements
-
-* [Android 8.0 (API 26)](https://developer.android.com/about/versions/oreo/android-8.0) and above
-
 ## Build
-
-This application currently working on android environment (API 26).
 
 ### Android
 
